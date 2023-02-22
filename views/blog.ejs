@@ -1,0 +1,83 @@
+<%- include('header.ejs') %>
+<section class="featured-blog mtb-40">
+    <div class="container">
+        <div class="row">
+
+            
+           
+            <% d.forEach((item)=>{ %>
+                <div class="col-md-4" style="background: linear-gradient(30deg,#a40808 0%,#b029298f 85%)">
+                    <div class="blog-box">
+                       
+                        <img src="<%= item.image.url %>" alt="blogss" height="200px" width="200px" />
+                         
+                        <h3><%= item.title %></h3>
+                        <p style="color: #000;"><%= item.createdAt.toLocaleDateString() %></p>
+                        <p style="color: #000;
+                        font-style: italic;"><%= item.description.slice(0,150) %></p>
+                        
+                        <a href="/blogdetail/<%= item._id %>" class="btn btn-danger">Read more...</a>
+                    </div>
+    
+                </div>
+                <% }) %>
+
+            
+            <!-- <div class="col-md-4">
+                <div class="blog-box">-->
+                    <!-- <img src="/upload/WhatsApp Image 2022-05-01 at 20.18.13.jpeg" alt="blog1" /> -->
+                    <!-- <img src="images/b7.jpg" alt="b7" />
+                    <h3> ddddd</h3>
+                    <p>by <span>RSGiTECH</span> on <span>October 22, 2018</span></p>
+                    <p>Discription- </p>
+                    <a href="detail.html" class="btn btn-danger">Read more...</a>
+                </div>
+
+            </div> -->
+            
+            <!-- <div class="col-md-4">
+                <div class="blog-box"> -->
+                    <!-- <img src="/upload/image_1652099173011.jpeg" alt="blog1" /> -->
+                    <!-- <img src="images/b7.webp" alt="b7" />
+                    <h3> sss</h3>
+                    <p>by <span>RSGiTECH</span> on <span>October 22, 2018</span></p>
+                    <p>Discription </p>
+                    <a href="detail.html" class="btn btn-danger">Read more...</a>
+                </div>
+
+            </div> -->
+            
+            <!-- <div class="col-md-4">
+                <div class="blog-box"> -->
+                    <!-- <img src="/upload/image_1652099186927.jpg" alt="blog1" /> -->
+                    <!-- <img src="images/b9.jpg" alt="b9" />
+                     
+                    <h3> aaa</h3>
+                    <p>by <span>RSGiTECH</span> on <span>October 22, 2018</span></p>
+                    <p>Discription </p>
+                    <a href="detail.html" class="btn btn-danger">Read more...</a>
+                </div>
+
+            </div> -->
+            
+            <!-- <div class="col-md-4">
+                <div class="blog-box"> -->
+                    <!-- <img src="/upload/image_1652700834608.jpeg" alt="blog1" /> -->
+                    <!-- <img src="images/b10.webp" alt="b10" />
+                    <h3> sss</h3>
+                    <p>by <span>RSGiTECH</span> on <span>October 22, 2018</span></p>
+                    <p>Discription </p>
+                    <a href="detail.html" class="btn btn-danger">Read more...</a>
+                </div>
+
+            </div> -->
+            
+            
+            
+             
+            
+             
+        </div>
+    </div>
+</section>
+<%- include('footer.ejs') %>

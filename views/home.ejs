@@ -1,0 +1,81 @@
+<%- include('header.ejs') %>
+<style>
+    body{
+        background: black;
+    }
+    .mm{
+        opacity: 0.8;
+       
+    }
+    .me:hover{
+        transform: scale(1.1);
+    }
+    .md{
+        box-shadow: 0 10px 16px 0 rgba(7, 162, 190, 0.2), 0 6px 20px 0 rgba(161, 158, 158, 0.19) !important;
+    }
+    .mf{
+        z-index: 1;
+    }
+    .mk{
+        text-transform: capitalize;
+    font-style: italic;
+    }
+    .b{
+        background: #a0144f;
+    border-radius: 14px;
+    }
+
+    
+
+</style>
+
+<section class="banner">
+    <div class="banner-box">
+        <div class="intro-text mf">
+            <div class="intro-text-box">
+                <h1 class="mk">find the best quality product on reasonable price</h1>
+                <p><input type="search" placeholder="search your product here" style="
+                    border-radius: 20px;"><button class="b">search</button></p>
+            </div>
+        </div>
+        <!-- <img src="assets/images/banner.jpg" alt="banner" /> -->
+        <img src="https://c4.wallpaperflare.com/wallpaper/639/223/686/city-urban-new-york-city-building-wallpaper-preview.jpg" alt="banner" class="mm"/>
+    </div>
+</section>
+<section class="featured-blog mtb-40">
+    <div class="container">
+        <div class="row">
+
+            <% d.forEach((item)=>{ %>
+            <div class="col-md-4">
+                <div class="blog-box md">
+                    <!-- <img src="/upload/image_1652702186852.jpeg" alt="blog1" /> -->
+                    <!-- <img src="images/b1.png" alt="b1" /> -->
+                    <img src="<%= item.image.url %>" alt="blogss"  height="200px" width="100px" class="me"/>
+                     
+                    <h3><%= item.title %></h3>
+                    <p><%= item.createdAt.toLocaleDateString() %></p>
+                    <p><%= item.description.slice(0,150) %></p>
+                    
+                    <a href="/blogdetail/<%= item._id %>" class="btn btn-danger">Read more...</a>
+                </div>
+
+            </div>
+            <% }) %>
+            
+            
+
+            
+        </div>
+    </div>
+</section>
+<%- include('footer.ejs') %>
+
+
+
+
+
+
+
+
+
